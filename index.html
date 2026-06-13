@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 语音绘图工具</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="control-panel" aria-label="语音绘图控制台">
+        <div class="brand-row">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">XEngineer 第四批次 · 题目二</p>
+            <h1>AI 语音绘图工具</h1>
+          </div>
+        </div>
+
+        <div class="status-card">
+          <span id="statusDot" class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="statusTitle">等待语音指令</strong>
+            <p id="statusText">点击开始后说：“画一个红色实心圆形，然后添加一条蓝色箭头”。</p>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button id="startButton" class="primary-button" type="button">开始聆听</button>
+          <button id="stopButton" class="secondary-button" type="button" disabled>停止</button>
+          <button id="exportButton" class="secondary-button" type="button">导出 PNG</button>
+        </div>
+
+        <section class="transcript-panel" aria-label="语音识别结果">
+          <h2>最近识别</h2>
+          <p id="transcript">暂无语音输入</p>
+        </section>
+
+        <section class="examples" aria-label="可用语音指令">
+          <h2>可说的指令</h2>
+          <ul>
+            <li>画一个红色实心圆形</li>
+            <li>添加一条蓝色箭头</li>
+            <li>画一个粗的紫色线条</li>
+            <li>向右移动最后一个图形</li>
+            <li>放大最后一个图形</li>
+            <li>撤销 / 重做 / 清空画布 / 导出</li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="workspace" aria-label="绘图工作区">
+        <div class="canvas-toolbar">
+          <div>
+            <p class="eyebrow">Voice Canvas</p>
+            <h2>语音生成画布</h2>
+          </div>
+          <span id="shapeCount" class="shape-count">0 个元素</span>
+        </div>
+        <canvas id="drawingCanvas" width="960" height="600" aria-label="语音绘图画布"></canvas>
+        <div class="history-panel">
+          <h2>指令记录</h2>
+          <ol id="historyList"></ol>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
+
