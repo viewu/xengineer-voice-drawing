@@ -76,7 +76,9 @@ npm test
 
 ## Demo 视频
 
-待补充：提交前请将 demo 视频上传至 bilibili、网盘或其他可访问平台，并把链接填写到这里。
+演示视频：[AI 语音绘图工具 - Google Chrome 2026-06-14 22-26-40.mp4](https://pan.baidu.com/s/1reEVcIQL9tmPyN4rPbCNWQ?pwd=n1nt)
+
+提取码：`n1nt`
 
 ## 设计文档
 
@@ -93,4 +95,3 @@ npm test
 ## 原创功能说明
 
 本项目的语音指令解析、复杂指令拆解、绘图状态管理、Canvas 渲染逻辑和交互界面均为本次比赛实现。
-
